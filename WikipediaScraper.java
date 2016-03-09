@@ -11,7 +11,7 @@ public class WikipediaScraper {
 		Document doc;
 		try {
 			doc = Jsoup.connect("http://en.wikipedia.org/").get();
-			Elements newsHeadlines = doc.select("title");
+			Elements newsHeadlines = doc.select("a");
 			System.out.println(newsHeadlines.get(0).text());
 
 		} catch (IOException e) {
